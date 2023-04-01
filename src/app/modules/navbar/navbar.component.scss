@@ -6,7 +6,9 @@ header {
   padding: 0 0 0 3.4375rem;
   height: 96px;
 }
-
+.logo-wrapper {
+  cursor: pointer;
+}
 nav {
   display: flex;
   width: 100%;
@@ -26,9 +28,9 @@ nav ul {
   padding: 0 10.3125rem 0 7.6875rem;
 }
 li a {
-  font-family: var(--barlow-condensed);
+  // font-family: var(--barlow-condensed);
   text-transform: uppercase;
-  letter-spacing: 2.7px;
+  // letter-spacing: 2.7px;
   color: var(--white);
   cursor: pointer;
   border-bottom: solid 3px transparent;
@@ -38,6 +40,9 @@ li a {
     font-weight: 700;
   }
   &:hover {
-    border-block-color: var(--white);
+    border-bottom-color: var(--lightWhite);
+  }
+  &.active {
+    border-bottom-color: var(--white);
   }
 }
