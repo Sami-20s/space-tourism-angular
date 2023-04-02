@@ -15,13 +15,14 @@ nav {
   justify-content: space-between;
   align-items: center;
   height: 100%;
-  background-color: blue;
+  background-color: transparent;
 }
 
 nav ul {
   display: flex;
   justify-content: space-between;
-  background-color: red;
+  background-color: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(40.7742px);
   height: 100%;
   width: 60%;
   align-items: center;
@@ -40,7 +41,7 @@ li a {
     font-weight: 700;
   }
   &:hover {
-    border-bottom-color: var(--lightWhite);
+    border-bottom-color: var(--light-white);
   }
   &.active {
     border-bottom-color: var(--white);

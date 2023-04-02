@@ -1,0 +1,40 @@
+<div class="wrapper">
+  <div class="body">
+    <h5 class="heading-5">
+      <span>01</span>
+      Pick your destination
+    </h5>
+    <ul>
+      <li *ngFor="let planet of getPlanets">
+        <a
+          class="nav-text {{ checkPlanetState(planet.name) ? 'active' : '' }}"
+          (click)="selectPlanet(planet)"
+          >{{ planet.name }}</a
+        >
+      </li>
+    </ul>
+    <app-destination-details [planet]="currentPlanet"></app-destination-details>
+    <!-- <section class="details">
+      <div class="left">
+        <img src="" alt="" />
+      </div>
+      <div class="right">
+        <div>
+          <h2 class="heading-2"></h2>
+          <p class="body-text"></p>
+          <hr />
+          <div class="details-footer">
+            <div>
+              <span></span>
+              <span></span>
+            </div>
+            <div>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+  </div>
+</div>

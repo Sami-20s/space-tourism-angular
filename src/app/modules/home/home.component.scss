@@ -1,0 +1,53 @@
+.explore-btn {
+  all: initial;
+  padding: 118px 62px;
+  border-radius: 100%;
+  display: flex;
+  background-color: var(--white);
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 37px;
+  letter-spacing: 2px;
+  color: var(--primary-color);
+  cursor: pointer;
+  font-family: var(--bellefair);
+  transition: var(--transition);
+  &:hover {
+    box-shadow: 0 0 0 80px rgba(255, 255, 255, 0.1);
+  }
+}
+
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  background-size: 100%;
+  background-position: center center;
+  background-image: url("/assets/images/home/background-home-desktop.jpg");
+}
+.body {
+  display: flex;
+  width: 100%;
+  padding: 20% 10.3125rem 0;
+  justify-content: space-between;
+  align-items: flex-end;
+  section:first-child {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 450px;
+    row-gap: 1.5rem;
+  }
+}
+.heading-5 {
+  color: var(--accent-color);
+}
+.heading-1 {
+  color: var(--white);
+}
+.body-text {
+  color: var(--accent-color);
+  font-weight: 400 !important;
+  line-height: 32px;
+}

@@ -18,6 +18,7 @@ body {
 a,
 a:visited {
   text-decoration: none;
+  color: unset;
 }
 
 ul,
@@ -25,32 +26,32 @@ li {
   list-style: none;
 }
 .heading-1 {
-  @include textStyle(9.375rem, var(--bellefair), 500);
+  @include textStyle(9.375rem, var(--bellefair), 400);
 }
 .heading-2 {
-  @include textStyle(6.25rem, var(--bellefair), 500);
+  @include textStyle(6.25rem, var(--bellefair), 400);
 }
 .heading-3 {
-  @include textStyle(3.5rem, var(--bellefair), 500);
+  @include textStyle(3.5rem, var(--bellefair), 400);
 }
 .heading-4 {
-  @include textStyle(2rem, var(--bellefair), 500);
+  @include textStyle(2rem, var(--bellefair), 400);
 }
 .heading-5 {
-  @include textStyle(1.75rem, var(--barlow-condensed), 500);
+  @include textStyle(1.75rem, var(--barlow-condensed), 400);
   letter-spacing: 4.75px;
 }
 .subheading-1 {
-  @include textStyle(1.75rem, var(--barlow-condensed), 500);
+  @include textStyle(1.75rem, var(--barlow-condensed), 400);
 }
 .subheading-2 {
-  @include textStyle(0.875rem, var(--barlow-condensed), 500);
+  @include textStyle(0.875rem, var(--barlow-condensed), 400);
   letter-spacing: 2.35px;
 }
 .nav-text {
-  @include textStyle(1rem, var(--barlow-condensed), 500);
+  @include textStyle(1rem, var(--barlow-condensed), 400);
   letter-spacing: 2.7px;
 }
-.body {
-  @include textStyle(1.125rem, var(--barlow-condensed), 500);
+.body-text {
+  @include textStyle(1.125rem, var(--barlow), 400);
 }
