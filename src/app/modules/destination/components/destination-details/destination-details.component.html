@@ -1,1 +1,20 @@
-<p>{{ planet.name }}</p>
+<article>
+  <section class="img">
+    <img [src]="planet.img" [alt]="planet.name" />
+  </section>
+  <section class="details">
+    <h2 class="heading-2">{{ planet.name }}</h2>
+    <p class="body-text">{{ planet.description }}</p>
+    <hr />
+    <div class="bottom-section">
+      <div>
+        <span class="subheading-2">AVG. DISTANCE</span>
+        <h6 class="subheading-1">{{ planet.avgDistance }}</h6>
+      </div>
+      <div>
+        <span class="subheading-2">Est. travel time</span>
+        <h6 class="subheading-1">{{ planet.estTravelTime }}</h6>
+      </div>
+    </div>
+  </section>
+</article>

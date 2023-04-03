@@ -42,7 +42,7 @@ li {
   letter-spacing: 4.75px;
 }
 .subheading-1 {
-  @include textStyle(1.75rem, var(--barlow-condensed), 400);
+  @include textStyle(1.75rem, var(--bellefair), 400);
 }
 .subheading-2 {
   @include textStyle(0.875rem, var(--barlow-condensed), 400);

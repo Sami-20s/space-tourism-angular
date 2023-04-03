@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Planet } from '../../interfaces/planet.interface';
 
 @Component({
   selector: 'app-destination-details',
@@ -10,5 +11,5 @@ import { CommonModule } from '@angular/common';
 })
 export class DestinationDetailsComponent {
   constructor() {}
-  @Input('planet') planet;
+  @Input('planet') planet : Planet;
 }

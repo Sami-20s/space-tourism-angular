@@ -21,7 +21,8 @@
   width: 100vw;
   height: 100vh;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
   background-size: 100%;
   background-position: center center;
   background-image: url("/assets/images/home/background-home-desktop.jpg");
@@ -29,7 +30,7 @@
 .body {
   display: flex;
   width: 100%;
-  padding: 20% 10.3125rem 0;
+  padding: 10% 10.3125rem 0;
   justify-content: space-between;
   align-items: flex-end;
   section:first-child {
