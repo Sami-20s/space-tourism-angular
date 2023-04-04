@@ -1,0 +1,18 @@
+.wrapper {
+  background-image: url("/assets/images/crew/background-crew-desktop.jpg");
+}
+.body {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 12% 10.3125rem 0;
+  justify-content: space-between;
+}
+.slider-wrapper {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+}
+app-crew-details {
+  width: 100%;
+}

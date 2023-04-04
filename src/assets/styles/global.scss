@@ -13,6 +13,7 @@ body {
 
 body {
   font-family: var(--bellefair);
+  color: var(--white);
 }
 
 a,
@@ -54,4 +55,14 @@ li {
 }
 .body-text {
   @include textStyle(1.125rem, var(--barlow), 400);
+}
+
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  background-size: 100%;
+  background-position: center center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

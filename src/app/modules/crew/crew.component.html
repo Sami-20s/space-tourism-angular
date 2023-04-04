@@ -1,0 +1,14 @@
+<div class="wrapper">
+  <div class="body">
+    <h5 class="heading-5">
+      <span>02</span>
+      Meet your crew
+    </h5>
+    <div class="slider-wrapper">
+      <app-crew-details
+        *ngFor="let crew of getCrew()"
+        [data]="crew"
+      ></app-crew-details>
+    </div>
+  </div>
+</div>

@@ -22,6 +22,11 @@ const routes: Routes = [
             (comp) => comp.DestinationComponent
           ),
       },
+      {
+        path: 'crew',
+        loadComponent: () =>
+          import('../crew/crew.component').then((comp) => comp.CrewComponent),
+      },
     ],
   },
 ];
