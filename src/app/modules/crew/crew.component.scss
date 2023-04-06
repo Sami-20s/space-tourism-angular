@@ -1,5 +1,6 @@
 .wrapper {
   background-image: url("/assets/images/crew/background-crew-desktop.jpg");
+  overflow-y: hidden;
 }
 .body {
   display: flex;
@@ -12,7 +13,26 @@
   display: flex;
   width: 100%;
   overflow: hidden;
+  align-items: center;
 }
-app-crew-details {
-  width: 100%;
+.pagination-wrapper {
+  position: absolute;
+  bottom: 5%;
+  width: 200px;
+  height: 15px;
+  display: flex;
+  column-gap: 1.5rem;
+}
+
+.dot {
+  all: initial;
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
+  background-color: rgba(255, 255, 255, 0.17);
+  cursor: pointer;
+  transition: var(--transition);
+  &.active {
+    background-color: var(--white);
+  }
 }

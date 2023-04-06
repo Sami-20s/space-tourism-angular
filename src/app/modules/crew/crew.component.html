@@ -6,9 +6,19 @@
     </h5>
     <div class="slider-wrapper">
       <app-crew-details
-        *ngFor="let crew of getCrew()"
+        *ngFor="let crew of getCrew(); let i = index"
         [data]="crew"
-      ></app-crew-details>
+        [ngStyle]="{ translate: currentSlide * -100 + '%' }"
+      >
+      </app-crew-details>
+    </div>
+    <div class="pagination-wrapper">
+      <button
+        class="dot"
+        *ngFor="let dot of [0, 1, 2, 3]"
+        (click)="onSlide(dot)"
+        [ngClass]="{ active: currentSlide == dot }"
+      ></button>
     </div>
   </div>
 </div>
