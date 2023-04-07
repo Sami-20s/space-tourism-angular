@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { CrewDetailsComponent } from './components/crew-details/crew-details.component';
 import { CrewService } from './services/crew.service';
 import { Subscription, interval, map } from 'rxjs';
+import { Crew } from './interfaces/crew';
 
 @Component({
   selector: 'app-crew',
@@ -19,7 +20,7 @@ export class CrewComponent implements OnInit, OnDestroy {
   }
   ngOnInit(): void {}
 
-  getCrew() {
+  getCrew(): Crew[] {
     return this.crewService.crew;
   }
   onSlide(dot) {

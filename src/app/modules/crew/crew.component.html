@@ -7,7 +7,7 @@
     <div class="slider-wrapper">
       <app-crew-details
         *ngFor="let crew of getCrew(); let i = index"
-        [data]="crew"
+        [crew]="crew"
         [ngStyle]="{ translate: currentSlide * -100 + '%' }"
       >
       </app-crew-details>

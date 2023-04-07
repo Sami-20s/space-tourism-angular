@@ -10,5 +10,5 @@ import { Crew } from '../../interfaces/crew';
   styleUrls: ['./crew-details.component.scss'],
 })
 export class CrewDetailsComponent {
-  @Input('data') data: Crew;
+  @Input() crew: Crew;
 }

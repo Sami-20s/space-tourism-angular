@@ -1,0 +1,26 @@
+<div class="wrapper">
+  <div class="body">
+    <h5 class="heading-5">
+      <span>03</span>
+      SPACE LAUNCH 101
+    </h5>
+    <div class="slider-wrapper">
+      <div class="oval-wrapper">
+        <div
+          class="oval-select"
+          *ngFor="let oval of [0, 1, 2]"
+          (click)="selectTechno(oval)"
+          [ngClass]="{ active: oval == selectedTechno }"
+        >
+          {{ oval + 1 }}
+        </div>
+      </div>
+      <div class="technologies-wrapper">
+        <app-technology-details
+          *ngFor="let technology of getTechnologies"
+          [technology]="technology"
+        ></app-technology-details>
+      </div>
+    </div>
+  </div>
+</div>

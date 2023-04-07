@@ -27,6 +27,13 @@ const routes: Routes = [
         loadComponent: () =>
           import('../crew/crew.component').then((comp) => comp.CrewComponent),
       },
+      {
+        path: 'technology',
+        loadComponent: () =>
+          import('../technology/technology.component').then(
+            (comp) => comp.TechnologyComponent
+          ),
+      },
     ],
   },
 ];
