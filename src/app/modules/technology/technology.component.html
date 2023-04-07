@@ -10,15 +10,18 @@
           class="oval-select"
           *ngFor="let oval of [0, 1, 2]"
           (click)="selectTechno(oval)"
-          [ngClass]="{ active: oval == selectedTechno }"
+          [ngClass]="{ active: oval == currentTechno }"
         >
           {{ oval + 1 }}
         </div>
       </div>
       <div class="technologies-wrapper">
         <app-technology-details
-          *ngFor="let technology of getTechnologies"
+          *ngFor="let technology of getTechnologies; let i = index"
           [technology]="technology"
+          style="--translate : 0 {{ -100 * currentTechno }}%; --opacity : {{
+            i == currentTechno ? 1 : 0
+          }}"
         ></app-technology-details>
       </div>
     </div>

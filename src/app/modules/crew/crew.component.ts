@@ -2,7 +2,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CrewDetailsComponent } from './components/crew-details/crew-details.component';
 import { CrewService } from './services/crew.service';
-import { Subscription, interval, map } from 'rxjs';
+import { BehaviorSubject, Subscription, interval, map, switchMap } from 'rxjs';
 import { Crew } from './interfaces/crew';
 
 @Component({
@@ -15,6 +15,8 @@ import { Crew } from './interfaces/crew';
 export class CrewComponent implements OnInit, OnDestroy {
   currentSlide: number = 0;
   subscription: Subscription;
+  swiperInterval$ = new BehaviorSubject<any>(null);
+
   constructor(private crewService: CrewService) {
     this.autoSwipe();
   }
@@ -25,15 +27,18 @@ export class CrewComponent implements OnInit, OnDestroy {
   }
   onSlide(dot) {
     this.currentSlide = dot;
+    this.swiperInterval$.next(null);
   }
   autoSwipe() {
-    this.subscription = interval(10000).subscribe((number) => {
-      if (this.currentSlide == 3) {
-        this.currentSlide = 0;
-      } else {
-        this.currentSlide++;
-      }
-    });
+    this.subscription = this.swiperInterval$
+      .pipe(switchMap(() => interval(10000)))
+      .subscribe((number) => {
+        if (this.currentSlide == 3) {
+          this.currentSlide = 0;
+        } else {
+          this.currentSlide++;
+        }
+      });
   }
   ngOnDestroy(): void {
     this.subscription.unsubscribe();
