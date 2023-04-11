@@ -1,0 +1,130 @@
+:host {
+  --mars-orbit: 150px;
+  --earth-orbit: 250px;
+  --jupiter-orbit: 350px;
+  --saturn-orbit: 450px;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: saturate(180%) blur(20px);
+  z-index: 10000;
+}
+.loader-wrapper {
+  position: relative;
+}
+.absolute-center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  translate: -50% -50%;
+}
+.heading-5 {
+  position: absolute;
+  bottom: 80px;
+  left: 50%;
+  translate: -50%;
+}
+.earth-orbit {
+  @extend .absolute-center;
+  width: var(--earth-orbit);
+  height: var(--earth-orbit);
+  border: 2px dashed #cccccc90;
+  margin: auto;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mars-orbit {
+  @extend .earth-orbit;
+  width: var(--mars-orbit);
+  height: var(--mars-orbit);
+}
+.jupiter-orbit {
+  @extend .earth-orbit;
+  width: var(--jupiter-orbit);
+  height: var(--jupiter-orbit);
+}
+.saturn-orbit {
+  @extend .earth-orbit;
+  width: var(--saturn-orbit);
+  height: var(--saturn-orbit);
+}
+.earth {
+  --D: 30px;
+  width: var(--D);
+  height: var(--D);
+  // background: red;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  margin: auto;
+  animation: earth-orbit 4s linear infinite;
+}
+.mars {
+  @extend .earth;
+  animation: mars-orbit 5s linear infinite;
+}
+.jupiter {
+  @extend .earth;
+  animation: jupiter-orbit 6s linear infinite;
+}
+.saturn {
+  @extend .earth;
+  --D: 50px;
+  animation: saturn-orbit 9s linear infinite;
+}
+.sun {
+  --D: 80px;
+  width: var(--D);
+  height: var(--D);
+}
+
+@keyframes earth-orbit {
+  0% {
+    transform: rotate(0deg) translate(calc(var(--earth-orbit) / 2)) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translate(calc(var(--earth-orbit) / 2))
+      rotate(-360deg);
+  }
+}
+@keyframes mars-orbit {
+  0% {
+    transform: rotate(0deg) translate(calc(var(--mars-orbit) / 2)) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translate(calc(var(--mars-orbit) / 2))
+      rotate(-360deg);
+  }
+}
+@keyframes jupiter-orbit {
+  0% {
+    transform: rotate(0deg) translate(calc(var(--jupiter-orbit) / 2))
+      rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translate(calc(var(--jupiter-orbit) / 2))
+      rotate(-360deg);
+  }
+}
+@keyframes saturn-orbit {
+  0% {
+    transform: rotate(0deg) translate(calc(var(--saturn-orbit) / 2))
+      rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translate(calc(var(--saturn-orbit) / 2))
+      rotate(-360deg);
+  }
+}
